@@ -36,27 +36,7 @@ class RootIndex extends React.Component {
               {posts.map(({ node }) => {
                 return (
                   <li key={node.slug}>
-                    <div>
-                      <Img alt="" fluid={node.heroImage.fluid} />
-                      <h3 className="text-xl">
-                        <Link to={`/blog/${node.slug}`}>{node.title}</Link>
-                      </h3>
-                      <small>{node.publishDate}</small>
-                      <div
-                        dangerouslySetInnerHTML={{
-                          __html: node.description.childMarkdownRemark.html,
-                        }}
-                      />
-                      {node.tags &&
-                        node.tags.map(tag => (
-                          <p
-                            className="mt-2 mr-2 text-gray-500 no-underline inline-block px-3 py-2 leading-none border-radius-2 border-2 border-gray-900"
-                            key={tag}
-                          >
-                            {tag}
-                          </p>
-                        ))}
-                    </div>
+                    <ArticlePreview article={node} />
                   </li>
                 )
               })}
