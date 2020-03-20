@@ -1,10 +1,11 @@
 import React from 'react'
-import { graphql } from 'gatsby'
+import { graphql, Link } from 'gatsby'
 import get from 'lodash/get'
 import Helmet from 'react-helmet'
 import Hero from '../components/hero'
 import Layout from '../components/layout'
 import ArticlePreview from '../components/article-preview'
+import Img from 'gatsby-image'
 
 class RootIndex extends React.Component {
   render() {
@@ -35,7 +36,27 @@ class RootIndex extends React.Component {
               {posts.map(({ node }) => {
                 return (
                   <li key={node.slug}>
-                    <ArticlePreview article={node} />
+                    <div>
+                      <Img alt="" fluid={node.heroImage.fluid} />
+                      <h3 className="text-xl">
+                        <Link to={`/blog/${node.slug}`}>{node.title}</Link>
+                      </h3>
+                      <small>{node.publishDate}</small>
+                      <p
+                        dangerouslySetInnerHTML={{
+                          __html: node.description.childMarkdownRemark.html,
+                        }}
+                      />
+                      {node.tags &&
+                        node.tags.map(tag => (
+                          <p
+                            className="mt-2 mr-2 text-gray-500 no-underline inline-block px-3 py-2 leading-none border-radius-2 border-2 border-gray-900"
+                            key={tag}
+                          >
+                            {tag}
+                          </p>
+                        ))}
+                    </div>
                   </li>
                 )
               })}
