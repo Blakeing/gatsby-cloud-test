@@ -42,11 +42,7 @@ class RootIndex extends React.Component {
                         <Link to={`/blog/${node.slug}`}>{node.title}</Link>
                       </h3>
                       <small>{node.publishDate}</small>
-                      <p
-                        dangerouslySetInnerHTML={{
-                          __html: node.description.childMarkdownRemark.html,
-                        }}
-                      />
+                      <br />
                       {node.tags &&
                         node.tags.map(tag => (
                           <p
