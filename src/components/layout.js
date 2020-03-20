@@ -1,7 +1,5 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import base from './base.css'
-import Container from './container'
 import Navigation from './navigation'
 
 class Template extends React.Component {
@@ -15,10 +13,10 @@ class Template extends React.Component {
     }
 
     return (
-      <Container>
+      <div style={{ maxWidth: 1180, margin: '0 auto' }}>
         <Navigation />
         {children}
-      </Container>
+      </div>
     )
   }
 }

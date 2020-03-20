@@ -5,8 +5,6 @@ import get from 'lodash/get'
 import Img from 'gatsby-image'
 import Layout from '../components/layout'
 
-import heroStyles from '../components/hero.module.css'
-
 const BlogPostTemplate = ({ data }) => {
   const post = data.contentfulBlogPost
   const siteTitle = data.site.siteMetadata.title
@@ -15,15 +13,23 @@ const BlogPostTemplate = ({ data }) => {
     <Layout location={data.location}>
       <div style={{ background: '#fff' }}>
         <Helmet title={`${post.title} | ${siteTitle}`} />
-        <div className={heroStyles.hero}>
+        <div className="relative bg-black text-white text-center">
           <Img
-            className={heroStyles.heroImage}
+            style={{ height: '61.8vh', maxHeight: '400px' }}
             alt={post.title}
             fluid={post.heroImage.fluid}
           />
         </div>
-        <div className="wrapper">
-          <h1 className="section-headline">{post.title}</h1>
+        <div
+          style={{ width: 'calc(100% - 10vmin)', padding: '5vmin 0' }}
+          className="mx-auto my-0"
+        >
+          <h1
+            style={{ marginBottom: '5vmin' }}
+            className="pb-2 border-gray-300 border-b-2"
+          >
+            {post.title}
+          </h1>
           <p
             style={{
               display: 'block',

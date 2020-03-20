@@ -17,9 +17,21 @@ class RootIndex extends React.Component {
         <div style={{ background: '#fff' }}>
           <Helmet title={siteTitle} />
           <Hero data={author.node} />
-          <div className="wrapper">
-            <h2 className="section-headline">Recent articles</h2>
-            <ul className="article-list">
+          <div
+            style={{ width: 'calc(100% - 10vmin)', padding: '5vmin 0' }}
+            className="mx-auto my-0"
+          >
+            <h2
+              style={{ marginBottom: '5vmin' }}
+              className="pb-2 border-gray-300 border-b-2"
+            >
+              Recent articles
+            </h2>
+
+            <ul
+              style={{ gridGap: '5vmin' }}
+              className="grid-cols-auto grid list-none m-0 p-0"
+            >
               {posts.map(({ node }) => {
                 return (
                   <li key={node.slug}>

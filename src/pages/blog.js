@@ -2,7 +2,6 @@ import React from 'react'
 import { Link, graphql } from 'gatsby'
 import get from 'lodash/get'
 import Helmet from 'react-helmet'
-import styles from './blog.module.css'
 import Layout from '../components/layout'
 import ArticlePreview from '../components/article-preview'
 
@@ -15,10 +14,26 @@ class BlogIndex extends React.Component {
       <Layout location={this.props.location}>
         <div style={{ background: '#fff' }}>
           <Helmet title={siteTitle} />
-          <div className={styles.hero}>Blog</div>
-          <div className="wrapper">
-            <h2 className="section-headline">Recent articles</h2>
-            <ul className="article-list">
+          <div
+            style={{ height: '61.8vh', maxHeight: '400px' }}
+            className="flex justify-center items-center bg-gray-300 text-2xl overflow-hidden"
+          >
+            Blog
+          </div>
+          <div
+            style={{ width: 'calc(100% - 10vmin)', padding: '5vmin 0' }}
+            className="mx-auto my-0"
+          >
+            <h2
+              style={{ marginBottom: '5vmin' }}
+              className="pb-2 border-gray-300 border-b-2"
+            >
+              Recent articles
+            </h2>
+            <ul
+              style={{ gridGap: '5vmin' }}
+              className="grid-cols-auto grid list-none m-0 p-0"
+            >
               {posts.map(({ node }) => {
                 return (
                   <li key={node.slug}>

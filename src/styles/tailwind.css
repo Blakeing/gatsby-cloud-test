@@ -1,0 +1,31 @@
+/* purgecss start ignore */
+@tailwind base;
+
+body {
+  font-family: 'Avenir', Tahoma, Arial, Helvetica, sans-serif;
+  font-size: 1em;
+  line-height: 1.65;
+  color: #373f49;
+  background: #eee;
+  margin: 0;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+h1,
+h2,
+h3 {
+  font-size: 2em;
+  font-weight: normal;
+}
+
+a {
+  color: currentColor;
+}
+
+@tailwind components;
+/* purgecss end ignore */
+@tailwind utilities;
