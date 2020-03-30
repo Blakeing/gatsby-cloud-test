@@ -24,7 +24,7 @@ const item = {
   },
 }
 
-const Brand = ({ data }) => {
+const Print = ({ data }) => {
   const items = data.allContentfulPortfolioItem.edges
 
   return (
@@ -92,13 +92,11 @@ const Brand = ({ data }) => {
   )
 }
 
-export default Brand
+export default Print
 
-export const brandQuery = graphql`
-  query BrandItemQuery {
-    allContentfulPortfolioItem(
-      filter: { overlayColor: { eq: "rgb(35, 146, 199)" } }
-    ) {
+export const webQuery = graphql`
+  query PrintItemQuery {
+    allContentfulPortfolioItem {
       edges {
         node {
           overlayColor

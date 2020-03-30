@@ -24,54 +24,47 @@ const item = {
   },
 }
 
-const Test = ({ data }) => {
+const All = ({ data }) => {
   const items = data.allContentfulPortfolioItem.edges
-  const [images, set] = useState(shuffle(items))
 
   return (
     <>
-      <div>
-        <ul className="hidden pr-40 lg:w-full lg:flex lg:items-center lg:justify-end">
-          <li className="px-3 py-1 text-2xl font-thin text-white border-l-4 border-white bg-dark-steel ">
-            Select a Category
-          </li>
-          <li>
-            <Link
-              style={{ backgroundColor: 'rgba(0, 0, 0, 0.5)' }}
-              className="px-3 py-1 text-2xl font-thin text-white hover:text-orange focus:outline-none"
-              to="/web "
-            >
-              Web
-            </Link>
-          </li>
-          <li>
-            <Link
-              style={{ backgroundColor: 'rgba(0, 0, 0, 0.5)' }}
-              className="px-3 py-1 text-2xl font-thin text-white hover:text-orange focus:outline-none "
-              to="/print"
-            >
-              Print
-            </Link>
-          </li>
-          <li>
-            <Link
-              style={{ backgroundColor: 'rgba(0, 0, 0, 0.5)' }}
-              className="px-3 py-1 text-2xl font-thin text-white hover:text-orange focus:outline-none "
-              to="/brand "
-            >
-              Brand
-            </Link>
-          </li>
-          <li>
-            <Link
-              style={{ backgroundColor: 'rgba(0, 0, 0, 0.5)' }}
-              className="px-3 py-1 text-2xl font-thin text-white hover:text-orange focus:outline-none "
-              to="/all "
-            >
-              All
-            </Link>
-          </li>
-        </ul>
+      <div className="hidden pr-40 lg:w-full lg:flex lg:items-center lg:justify-end">
+        <div className="px-3 py-1 text-2xl font-thin text-white border-l-4 border-white bg-dark-steel ">
+          Select a Category
+        </div>
+
+        <Link
+          style={{ backgroundColor: 'rgba(0, 0, 0, 0.5)' }}
+          className="px-3 py-1 text-2xl font-thin text-white hover:text-orange focus:outline-none"
+          to="/web "
+        >
+          Web
+        </Link>
+
+        <Link
+          style={{ backgroundColor: 'rgba(0, 0, 0, 0.5)' }}
+          className="px-3 py-1 text-2xl font-thin text-white hover:text-orange focus:outline-none "
+          to="/print"
+        >
+          Print
+        </Link>
+
+        <Link
+          style={{ backgroundColor: 'rgba(0, 0, 0, 0.5)' }}
+          className="px-3 py-1 text-2xl font-thin text-white hover:text-orange focus:outline-none "
+          to="/brand "
+        >
+          Brand
+        </Link>
+
+        <Link
+          style={{ backgroundColor: 'rgba(0, 0, 0, 0.5)' }}
+          className="px-3 py-1 text-2xl font-thin text-white hover:text-orange focus:outline-none "
+          to="/all "
+        >
+          All
+        </Link>
       </div>
       <motion.div
         className="grid w-full h-full p-5 m-0 overflow-hidden list-none "
@@ -99,7 +92,7 @@ const Test = ({ data }) => {
   )
 }
 
-export default Test
+export default All
 
 export const allQuery = graphql`
   query AllItemQuery {
