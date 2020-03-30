@@ -37,7 +37,7 @@ const Web = ({ data }) => {
         <Link
           style={{ backgroundColor: 'rgba(0, 0, 0, 0.5)' }}
           className="px-3 py-1 text-2xl font-thin text-white hover:text-orange focus:outline-none"
-          to="/web "
+          to="/web"
         >
           Web
         </Link>
@@ -53,7 +53,7 @@ const Web = ({ data }) => {
         <Link
           style={{ backgroundColor: 'rgba(0, 0, 0, 0.5)' }}
           className="px-3 py-1 text-2xl font-thin text-white hover:text-orange focus:outline-none "
-          to="/brand "
+          to="/brand"
         >
           Brand
         </Link>
@@ -61,7 +61,7 @@ const Web = ({ data }) => {
         <Link
           style={{ backgroundColor: 'rgba(0, 0, 0, 0.5)' }}
           className="px-3 py-1 text-2xl font-thin text-white hover:text-orange focus:outline-none "
-          to="/all "
+          to="/all"
         >
           All
         </Link>
