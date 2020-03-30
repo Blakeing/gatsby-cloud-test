@@ -96,11 +96,10 @@ export default Brand
 
 export const brandQuery = graphql`
   query BrandItemQuery {
-    allContentfulPortfolioItem(
-      filter: { overlayColor: { eq: "rgb(35, 146, 199)" } }
-    ) {
+    allContentfulPortfolioItem(filter: { category: { eq: "brand" } }) {
       edges {
         node {
+          category
           overlayColor
           image {
             fluid(maxWidth: 1000, maxHeight: 671, resizingBehavior: SCALE) {

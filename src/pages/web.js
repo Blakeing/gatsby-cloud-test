@@ -96,9 +96,10 @@ export default Web
 
 export const webQuery = graphql`
   query WebItemQuery {
-    allContentfulPortfolioItem {
+    allContentfulPortfolioItem(filter: { category: { eq: "web" } }) {
       edges {
         node {
+          category
           overlayColor
           image {
             fluid(maxWidth: 1000, maxHeight: 671, resizingBehavior: SCALE) {

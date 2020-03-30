@@ -96,9 +96,10 @@ export default Print
 
 export const webQuery = graphql`
   query PrintItemQuery {
-    allContentfulPortfolioItem {
+    allContentfulPortfolioItem(filter: { category: { eq: "print" } }) {
       edges {
         node {
+          category
           overlayColor
           image {
             fluid(maxWidth: 1000, maxHeight: 671, resizingBehavior: SCALE) {
