@@ -19,6 +19,8 @@ if (!spaceId || !accessToken) {
 module.exports = {
   siteMetadata: {
     title: 'Gatsby Contentful starter',
+    description: `Gatsby starter styled with Tailwind`,
+    author: `Blake Ingenthron`,
   },
   pathPrefix: '/gatsby-contentful-starter',
   plugins: [
@@ -41,6 +43,7 @@ module.exports = {
         ],
       },
     },
+
     {
       resolve: `gatsby-plugin-purgecss`,
       options: {

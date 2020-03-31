@@ -39,13 +39,14 @@ module.exports = {
         '300': '18.75rem',
         '184': '11.5rem',
       },
+      backgroundPosition: {
+        slider: 'left 5rem bottom -1rem',
+        none: '',
+      },
     },
     container: {
       center: true,
       padding: '1.25rem',
-    },
-    fontFamily: {
-      sans: ['Inter var', 'system-ui', 'sans-serif'],
     },
   },
   variants: {

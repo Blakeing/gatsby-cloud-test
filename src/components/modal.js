@@ -1,0 +1,39 @@
+import React from 'react';
+
+// eslint-disable-next-line react/prop-types
+const Modal = ({ closeModal, animation, pointerEvents }) => {
+  return (
+    <div
+      className="fixed top-0 left-0 flex items-center justify-center w-full h-screen"
+      style={{ pointerEvents }}
+    >
+      <div
+        className="relative w-full max-w-6xl bg-white rounded shadow-lg"
+        style={animation}
+      >
+        <button
+          style={{ top: '5%', right: '5%' }}
+          className="absolute top-0 right-0 focus:outline-none"
+          onClick={closeModal}
+        >
+          <svg
+            aria-hidden="true"
+            data-prefix="far"
+            data-icon="window-close"
+            className="w-10 h-10 text-white fill-current"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 512 512"
+          >
+            <path
+              fill="currentColor "
+              d="M464 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h416c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zm0 394c0 3.3-2.7 6-6 6H54c-3.3 0-6-2.7-6-6V86c0-3.3 2.7-6 6-6h404c3.3 0 6 2.7 6 6v340zM356.5 194.6L295.1 256l61.4 61.4c4.6 4.6 4.6 12.1 0 16.8l-22.3 22.3c-4.6 4.6-12.1 4.6-16.8 0L256 295.1l-61.4 61.4c-4.6 4.6-12.1 4.6-16.8 0l-22.3-22.3c-4.6-4.6-4.6-12.1 0-16.8l61.4-61.4-61.4-61.4c-4.6-4.6-4.6-12.1 0-16.8l22.3-22.3c4.6-4.6 12.1-4.6 16.8 0l61.4 61.4 61.4-61.4c4.6-4.6 12.1-4.6 16.8 0l22.3 22.3c4.7 4.6 4.7 12.1 0 16.8z"
+            />
+          </svg>
+        </button>
+        <img src="https://source.unsplash.com/random/1920x1080" />
+      </div>
+    </div>
+  );
+};
+
+export default Modal;

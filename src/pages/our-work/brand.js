@@ -24,7 +24,7 @@ const item = {
   },
 }
 
-const Print = ({ data }) => {
+const Brand = ({ data }) => {
   const items = data.allContentfulPortfolioItem.edges
 
   return (
@@ -37,7 +37,7 @@ const Print = ({ data }) => {
         <Link
           style={{ backgroundColor: 'rgba(0, 0, 0, 0.5)' }}
           className="px-3 py-1 text-2xl font-thin text-white hover:text-orange focus:outline-none"
-          to="/web"
+          to="/our-work/web"
         >
           Web
         </Link>
@@ -45,7 +45,7 @@ const Print = ({ data }) => {
         <Link
           style={{ backgroundColor: 'rgba(0, 0, 0, 0.5)' }}
           className="px-3 py-1 text-2xl font-thin text-white hover:text-orange focus:outline-none "
-          to="/print"
+          to="/our-work/print"
         >
           Print
         </Link>
@@ -53,7 +53,7 @@ const Print = ({ data }) => {
         <Link
           style={{ backgroundColor: 'rgba(0, 0, 0, 0.5)' }}
           className="px-3 py-1 text-2xl font-thin text-white hover:text-orange focus:outline-none "
-          to="/brand"
+          to="/our-work/brand"
         >
           Brand
         </Link>
@@ -61,7 +61,7 @@ const Print = ({ data }) => {
         <Link
           style={{ backgroundColor: 'rgba(0, 0, 0, 0.5)' }}
           className="px-3 py-1 text-2xl font-thin text-white hover:text-orange focus:outline-none "
-          to="/all"
+          to="/our-work"
         >
           All
         </Link>
@@ -92,11 +92,11 @@ const Print = ({ data }) => {
   )
 }
 
-export default Print
+export default Brand
 
-export const webQuery = graphql`
-  query PrintItemQuery {
-    allContentfulPortfolioItem(filter: { category: { eq: "print" } }) {
+export const brandQuery = graphql`
+  query BrandItemQuery {
+    allContentfulPortfolioItem(filter: { category: { eq: "brand" } }) {
       edges {
         node {
           category

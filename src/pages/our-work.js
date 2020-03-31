@@ -24,7 +24,7 @@ const item = {
   },
 }
 
-const Web = ({ data }) => {
+const All = ({ data }) => {
   const items = data.allContentfulPortfolioItem.edges
 
   return (
@@ -37,7 +37,7 @@ const Web = ({ data }) => {
         <Link
           style={{ backgroundColor: 'rgba(0, 0, 0, 0.5)' }}
           className="px-3 py-1 text-2xl font-thin text-white hover:text-orange focus:outline-none"
-          to="/web"
+          to="/our-work/web"
         >
           Web
         </Link>
@@ -45,7 +45,7 @@ const Web = ({ data }) => {
         <Link
           style={{ backgroundColor: 'rgba(0, 0, 0, 0.5)' }}
           className="px-3 py-1 text-2xl font-thin text-white hover:text-orange focus:outline-none "
-          to="/print"
+          to="/our-work/print"
         >
           Print
         </Link>
@@ -53,7 +53,7 @@ const Web = ({ data }) => {
         <Link
           style={{ backgroundColor: 'rgba(0, 0, 0, 0.5)' }}
           className="px-3 py-1 text-2xl font-thin text-white hover:text-orange focus:outline-none "
-          to="/brand"
+          to="/our-work/brand"
         >
           Brand
         </Link>
@@ -61,7 +61,7 @@ const Web = ({ data }) => {
         <Link
           style={{ backgroundColor: 'rgba(0, 0, 0, 0.5)' }}
           className="px-3 py-1 text-2xl font-thin text-white hover:text-orange focus:outline-none "
-          to="/all"
+          to="/our-work"
         >
           All
         </Link>
@@ -92,14 +92,13 @@ const Web = ({ data }) => {
   )
 }
 
-export default Web
+export default All
 
-export const webQuery = graphql`
-  query WebItemQuery {
-    allContentfulPortfolioItem(filter: { category: { eq: "web" } }) {
+export const allQuery = graphql`
+  query AllItemQuery {
+    allContentfulPortfolioItem {
       edges {
         node {
-          category
           overlayColor
           image {
             fluid(maxWidth: 1000, maxHeight: 671, resizingBehavior: SCALE) {
