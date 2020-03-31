@@ -43,6 +43,10 @@ module.exports = {
         slider: 'left 5rem bottom -1rem',
         none: '',
       },
+      fontSize: {
+        '7xl': '5rem',
+        '8xl': '25rem',
+      },
     },
     container: {
       center: true,
