@@ -173,36 +173,13 @@ const All = ({ data }) => {
           All
         </Link>
       </div>
-      <div style={{ backgroundColor: '#2B2B2B' }} className="flex lg:hidden ">
-        <Link
-          className="py-3 pl-5 pr-6 text-sm font-light tracking-wide text-white "
-          to="/our-work/web"
-        >
-          Web
-        </Link>
-        <Link
-          className="py-3 pr-6 text-sm font-light tracking-wide text-white"
-          to="/our-work/print"
-        >
-          Print
-        </Link>
-        <Link
-          className="py-3 pr-6 text-sm font-light tracking-wide text-white"
-          to="/our-work/brand"
-        >
-          Brand
-        </Link>
-        <Link
-          className="py-3 pr-6 text-sm font-light tracking-wide text-white"
-          to="/our-work/"
-        >
-          All
-        </Link>
-      </div>
+
       <motion.div
         className="grid w-full h-full p-5 m-0 overflow-hidden list-none "
         style={{
-          gridTemplateColumns: 'repeat(4, 1fr)',
+          gridTemplateColumns: isDesktopOrLaptop
+            ? 'repeat(4, 1fr)'
+            : 'repeat(1, 1fr)',
 
           gap: '15px',
         }}
@@ -221,6 +198,7 @@ const All = ({ data }) => {
           </motion.div>
         ))}
       </motion.div>
+      <Footer />
     </>
   )
 }
