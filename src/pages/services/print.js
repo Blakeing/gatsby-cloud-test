@@ -176,7 +176,7 @@ const Print = () => {
         <SideNav isOpen={isNavOpen} />
         <div style={{ bottom: '25%', left: '5%' }} className="absolute">
           <h2 className="pl-5 text-3xl font-bold text-white lg:pl-16 md:text-5xl">
-            Brand
+            Print
           </h2>
         </div>
 
