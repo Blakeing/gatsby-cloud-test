@@ -304,9 +304,12 @@ const Web = () => {
               Explainer Videos
             </li>
           </ul>
-          <button className="px-10 py-3 text-sm font-semibold tracking-wider text-white uppercase bg-orange">
+          <Link
+            className="px-10 py-3 text-sm font-semibold tracking-wider text-white uppercase bg-orange"
+            to="/contact"
+          >
             Contact Us
-          </button>
+          </Link>
         </div>
         <div style={{ backgroundColor: '#2e2e2e' }} className=" md:w-1/2">
           <div className="flex flex-col justify-between ">
@@ -375,9 +378,12 @@ const Web = () => {
             </div>
 
             <div className="py-10 mx-auto">
-              <button className="px-10 py-3 text-sm font-semibold tracking-wider text-white uppercase bg-orange">
+              <Link
+                className="px-10 py-3 text-sm font-semibold tracking-wider text-white uppercase bg-orange"
+                to="/our-work/web"
+              >
                 View More
-              </button>
+              </Link>
             </div>
           </div>
         </div>

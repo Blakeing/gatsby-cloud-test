@@ -10,86 +10,74 @@ import Printer from '../../images/header_bg_print.jpg'
 
 const images = [
   {
-    url: require('../../images/print_houston-haze.jpg'),
+    url: require('../../images/print_thumb-houston-haze.jpg'),
     color: 'bg-edge',
     alt: 'hi',
     route: '/',
   },
   {
-    url: require('../../images/print_first-tire-poster.jpg'),
+    url: require('../../images/print_thumb-first-tire-poster.jpg'),
     color: 'bg-hci',
     alt: 'hi',
     route: '/',
   },
   {
-    url: require('../../images/print_spring_park_bizcard.jpg'),
+    url: require('../../images/print_thumb_spring_park_bizcard.jpg'),
     color: 'bg-gkh',
     alt: 'work',
     route: '/contact',
   },
   {
-    url: require('../../images/print_opportune_clay-court2.jpg'),
+    url: require('../../images/print_thumb_opportune_clay-court2.jpg'),
     color: 'bg-holland',
     alt: 'work',
     route: '/contact',
   },
   {
-    url: require('../../images/print_uh_law_3dlex.jpg'),
+    url: require('../../images/print_thumb_sandbox_bizcard.jpg'),
     color: 'bg-hookie',
     alt: 'hi',
     route: '/',
   },
   {
-    url: require('../../images/print_sandbox_bizcard.jpg'),
+    url: require('../../images/print_thumb_purl_loop_bizcard.jpg'),
     color: 'bg-martinez',
     alt: 'hi',
     route: '/',
   },
   {
-    url: require('../../images/print_purl_loop_bizcard.jpg'),
+    url: require('../../images/print_thumb_prepair_respond_booth_a.jpg'),
     color: 'bg-martinez',
     alt: 'hi',
     route: '/',
   },
   {
-    url: require('../../images/print_prepair_respond_booth_a.jpg'),
+    url: require('../../images/print_thumb_paisley_house_bizcard.jpg'),
+    color: 'bg-martinez',
+    alt: 'hi',
+    route: '/',
+  },
+  {
+    url: require('../../images/print_thumb_reynolds_frizzell_bizcard.jpg'),
     color: 'bg-lead',
     alt: 'hi',
     route: '/',
   },
   {
-    url: require('../../images/print_paisley_house_bizcard.jpg'),
+    url: require('../../images/print_thumb_alitek_bizcard.jpg'),
     color: 'bg-sbl',
     alt: 'hi',
     route: '/',
   },
   {
-    url: require('../../images/print_reynolds_frizzell_bizcard.jpg'),
+    url: require('../../images/print_thumb_ttl_brochure.jpg'),
     color: 'bg-trace',
     alt: 'hi',
     route: '/',
   },
   {
-    url: require('../../images/print_eenr_brochure.jpg'),
+    url: require('../../images/print_thumb_raus_choir_ad.jpg'),
     color: 'bg-creed',
-    alt: 'hi',
-    route: '/',
-  },
-  {
-    url: require('../../images/print_alitek_bizcard.jpg'),
-    color: 'bg-flash',
-    alt: 'hi',
-    route: '/',
-  },
-  {
-    url: require('../../images/print_ttl_brochure.jpg'),
-    color: 'bg-frizzell',
-    alt: 'hi',
-    route: '/',
-  },
-  {
-    url: require('../../images/print_raus_choir_ad.jpg'),
-    color: 'bg-griesenbeck',
     alt: 'hi',
     route: '/',
   },
@@ -299,9 +287,12 @@ const Print = () => {
               Signs
             </li>
           </ul>
-          <button className="px-10 py-3 text-sm font-semibold tracking-wider text-white uppercase bg-orange">
+          <Link
+            className="px-10 py-3 text-sm font-semibold tracking-wider text-white uppercase bg-orange"
+            to="/contact"
+          >
             Contact Us
-          </button>
+          </Link>
         </div>
         <div style={{ backgroundColor: '#2e2e2e' }} className=" md:w-1/2">
           <div className="flex flex-col justify-between ">
@@ -353,13 +344,13 @@ const Print = () => {
                   require('../../images/print_first-tire-poster.jpg'),
                   require('../../images/print_spring_park_bizcard.jpg'),
                   require('../../images/print_opportune_clay-court2.jpg'),
-                  require('../../images/print_uh_law_3dlex.jpg'),
+
                   require('../../images/print_sandbox_bizcard.jpg'),
                   require('../../images/print_purl_loop_bizcard.jpg'),
                   require('../../images/print_prepair_respond_booth_a.jpg'),
                   require('../../images/print_paisley_house_bizcard.jpg'),
                   require('../../images/print_reynolds_frizzell_bizcard.jpg'),
-                  require('../../images/print_eenr_brochure.jpg'),
+
                   require('../../images/print_alitek_bizcard.jpg'),
                   require('../../images/print_ttl_brochure.jpg'),
                   require('../../images/print_raus_choir_ad.jpg'),
@@ -368,9 +359,12 @@ const Print = () => {
               />
             </div>
             <div className="py-10 mx-auto">
-              <button className="px-10 py-3 text-sm font-semibold tracking-wider text-white uppercase bg-orange">
+              <Link
+                className="px-10 py-3 text-sm font-semibold tracking-wider text-white uppercase bg-orange"
+                to="/our-work/print"
+              >
                 View More
-              </button>
+              </Link>
             </div>
           </div>
         </div>
