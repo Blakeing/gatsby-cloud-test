@@ -33,7 +33,7 @@ const item = {
 const All = ({ data }) => {
   const [isNavOpen, setNavOpen] = useState(false)
 
-  const items = data.allContentfulPortfolioItem.edges
+  const items = shuffle(data.allContentfulPortfolioItem.edges)
 
   const isDesktopOrLaptop = useMediaQuery({
     query: '(min-device-width: 1224px)',
