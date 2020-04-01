@@ -248,32 +248,7 @@ const Print = () => {
           Marketing
         </Link>
       </div>
-      <div style={{ backgroundColor: '#2B2B2B' }} className="flex lg:hidden ">
-        <Link
-          className="py-3 pl-5 pr-6 text-sm font-light tracking-wide text-white "
-          to="/web"
-        >
-          Web
-        </Link>
-        <Link
-          className="py-3 pr-6 text-sm font-light tracking-wide text-white"
-          to="/print"
-        >
-          Print
-        </Link>
-        <Link
-          className="py-3 pr-6 text-sm font-light tracking-wide text-white"
-          to="/brand"
-        >
-          Brand
-        </Link>
-        <Link
-          className="py-3 text-sm font-light tracking-wide text-white "
-          to="/marketing"
-        >
-          Marketing
-        </Link>
-      </div>
+
       <div className="flex flex-wrap">
         <div
           style={{ backgroundColor: '#F7F7F7' }}
