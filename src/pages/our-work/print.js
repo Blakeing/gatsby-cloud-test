@@ -179,7 +179,6 @@ const Print = ({ data }) => {
           gridTemplateColumns: isDesktopOrLaptop
             ? 'repeat(4, 1fr)'
             : 'repeat(1, 1fr)',
-
           gap: '15px',
         }}
         variants={container}
@@ -212,7 +211,7 @@ export const webQuery = graphql`
           overlayColor
           image {
             fluid(maxWidth: 1000, maxHeight: 671, resizingBehavior: SCALE) {
-              ...GatsbyContentfulFluid_tracedSVG
+              ...GatsbyContentfulFluid
             }
           }
         }
