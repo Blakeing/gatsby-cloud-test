@@ -16,7 +16,7 @@ class BlogIndex extends React.Component {
           <Helmet title={siteTitle} />
           <div
             style={{ height: '61.8vh', maxHeight: '400px' }}
-            className="flex justify-center items-center bg-gray-300 text-2xl overflow-hidden"
+            className="flex items-center justify-center overflow-hidden text-2xl bg-gray-300"
           >
             Blog
           </div>
@@ -26,13 +26,13 @@ class BlogIndex extends React.Component {
           >
             <h2
               style={{ marginBottom: '5vmin' }}
-              className="pb-2 border-gray-300 border-b-2"
+              className="pb-2 border-b-2 border-gray-300"
             >
               Recent articles
             </h2>
             <ul
               style={{ gridGap: '5vmin' }}
-              className="grid-cols-auto grid list-none m-0 p-0"
+              className="grid p-0 m-0 list-none grid-cols-auto"
             >
               {posts.map(({ node }) => {
                 return (
@@ -67,7 +67,7 @@ export const pageQuery = graphql`
           tags
           heroImage {
             fluid(maxWidth: 350, maxHeight: 196, resizingBehavior: SCALE) {
-              ...GatsbyContentfulFluid_tracedSVG
+              ...GatsbyContentfulFluid
             }
           }
           description {
