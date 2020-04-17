@@ -74,18 +74,22 @@ const Index = () => {
             help you develop a strategy that blends the appropriate design,
             technology and user experience into successful outcomes.
           </p>
-          <button
-            style={{ backgroundColor: 'rgb(236, 82, 38)' }}
-            className="px-12 py-3 mt-4 mr-2 text-xs font-bold tracking-widest text-white uppercase bg-red-500 hover:bg-gray-700 "
-          >
-            Our Team
-          </button>
-          <button
-            style={{ backgroundColor: 'rgb(236, 82, 38)' }}
-            className="px-12 py-3 mt-4 text-xs font-bold tracking-widest text-white uppercase bg-red-500 hover:bg-gray-700 "
-          >
-            Contact Us
-          </button>
+          <Link to="/about">
+            <button
+              style={{ backgroundColor: 'rgb(236, 82, 38)' }}
+              className="px-12 py-3 mt-4 mr-2 text-xs font-bold tracking-widest text-white uppercase bg-red-500 hover:bg-gray-700 "
+            >
+              Our Team
+            </button>
+          </Link>
+          <Link to="/contact">
+            <button
+              style={{ backgroundColor: 'rgb(236, 82, 38)' }}
+              className="px-12 py-3 mt-4 text-xs font-bold tracking-widest text-white uppercase bg-red-500 hover:bg-gray-700 "
+            >
+              Contact Us
+            </button>
+          </Link>
         </div>
         <div className="p-5 mx-auto md:w-1/2 lg:px-16 xl:py-16">
           <p className="text-2xl font-bold tracking-wide text-gray-800 lg:text-3xl">
@@ -153,8 +157,7 @@ const Index = () => {
           </div>
         </div>
       </div>
-      <Testimonials />
-      <ClientsSlider />
+
       <Footer />
     </div>
   )

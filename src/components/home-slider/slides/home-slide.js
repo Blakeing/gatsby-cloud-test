@@ -61,7 +61,7 @@ const HomeSlide = () => {
             style={{
               ...fade,
             }}
-            className="font-bold tracking-wide text-white  sm:text-5xl md:text-6xl lg:text-7xl lg:font-extrabold"
+            className="text-3xl font-bold tracking-wide text-white sm:text-5xl md:text-6xl lg:text-7xl lg:font-extrabold"
           >
             A Creative Agency
           </animated.h1>
