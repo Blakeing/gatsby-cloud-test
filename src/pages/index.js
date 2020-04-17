@@ -19,7 +19,7 @@ const Index = () => {
     <div className="z-0 ">
       <header
         style={{ marginBottom: '.25rem' }}
-        className="fixed z-40 w-full bg-white shadow lg:hidden"
+        className="fixed z-40 w-full bg-white lg:hidden"
       >
         <div className="flex flex-wrap items-center justify-between p-4 mx-auto ">
           <Link className="flex items-center text-white no-underline" to="/">
